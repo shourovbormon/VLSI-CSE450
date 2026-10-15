@@ -2,7 +2,8 @@
 **Course:** CSE 450 — VLSI Lab  
 **University:** University of Asia Pacific  
 **Project:** Final Project — Spring 2026  
-**Student ID:** 22201028  
+**Student ID:** 22201028
+**Student Name:** Shourov Chandra Bormon
 **Assigned Instruction Set:** Set 8  
 **Implementation Language:** VHDL  
 **Simulation Tool:** Xilinx ISE  
@@ -80,27 +81,25 @@ The ACC register stores the CPU's current result and is exposed through the outp
 ## 5. Project Folder Structure
 
 ```text
-Set8_CPU/
-├── src/
-│   ├── nand_gate.vhd
-│   ├── not_gate.vhd
-│   ├── and_gate.vhd
-│   ├── or_gate.vhd
-│   ├── xor_gate.vhd
-│   ├── half_adder.vhd
-│   ├── full_adder_nand.vhd
-│   ├── alu_8bit.vhd
-│   ├── program_counter.vhd
-│   ├── program_rom.vhd
-│   ├── control_unit.vhd
-│   ├── acc_register.vhd
-│   ├── r_register.vhd
-│   ├── z_flag.vhd
-│   └── cpu_top.vhd
-├── testbench/
-│   └── tb_cpu_top.vhd
-└── report/
-    └── waveforms/
+CPU_8_bit/
+├── screenshots
+├── nand_gate.vhd
+├── not_gate.vhd
+├── and_gate.vhd
+├── or_gate.vhd
+├── xor_gate.vhd
+├── half_adder.vhd
+├── full_adder_nand.vhd
+├── alu_8bit.vhd
+├── program_counter.vhd
+├── program_rom.vhd
+├── control_unit.vhd
+├── acc_register.vhd
+├── r_register.vhd
+├── z_flag.vhd
+│── cpu_top.vhd
+├── tb_cpu_top.vhd
+└── README.md
 ```
 
 ### Module Descriptions
@@ -189,7 +188,6 @@ Compile the VHDL files in dependency order:
 5. Run behavioral simulation.
 6. Observe the clock, reset, PC, Q, R_OUT, and Z signals.
 7. Compare the results with the expected Set 8 program trace.
-8. Save the waveform screenshots in `report/waveforms/` using the filenames referenced below.
 
 **Note:** The supplied testbench verifies the complete CPU program. Separate module-level truth-table screenshots require appropriate individual testbenches or equivalent module-specific simulations.
 
@@ -222,260 +220,101 @@ The testbench should report `ALL SET 8 CPU TESTS PASSED` when all assertions suc
 
 # 10. Screenshot Evidence
 
-**Instructions for adding screenshots:** Save each screenshot using the filename shown in the corresponding section. Place the image in `report/waveforms/`. The Markdown image references below provide spaces for the screenshots and will display them when the image files are added.
-
-Each screenshot should be readable, show the relevant signal names or schematic components, and include enough information to identify the functionality being demonstrated.
-
 ## 10.1 Project Hierarchy and Top-Level Architecture
 
-**What to include:** The Xilinx ISE project hierarchy or RTL schematic showing the main CPU components and their connections.
-
-**Suggested filename:** `00_cpu_hierarchy.png`
-
-![CPU project hierarchy and top-level architecture](report/waveforms/00_cpu_hierarchy.png)
+![CPU project hierarchy and top-level architecture](screenshots/cpu_top.png)
 
 *Figure 1: Project hierarchy and top-level CPU architecture.*
 
 ## 10.2 NAND Gate Simulation
 
-**What to include:** A waveform showing A, B, and Y for all four NAND input combinations.
+![NAND gate simulation](screenshots/nand_gate.png)
 
-**Suggested filename:** `01_nand_gate.png`
-
-![NAND gate simulation](report/waveforms/01_nand_gate.png)
-
-*Figure 2: NAND gate truth-table verification.*
+*Figure 2: NAND gate verification.*
 
 ## 10.3 NOT Gate Simulation
+![NOT gate simulation](screenshots/not_gate.png)
 
-**What to include:** A waveform showing the input A and inverted output Y for both input values.
-
-**Suggested filename:** `02_not_gate.png`
-
-![NOT gate simulation](report/waveforms/02_not_gate.png)
-
-*Figure 3: NOT gate truth-table verification.*
+*Figure 3: NOT gate verification.*
 
 ## 10.4 AND Gate Simulation
+![AND gate simulation](screenshots/and_gate.png)
 
-**What to include:** A waveform showing A, B, and Y for all four input combinations.
-
-**Suggested filename:** `03_and_gate.png`
-
-![AND gate simulation](report/waveforms/03_and_gate.png)
-
-*Figure 4: AND gate truth-table verification.*
+*Figure 4: AND gate verification.*
 
 ## 10.5 OR Gate Simulation
+![OR gate simulation](screenshots/or_gate.png)
 
-**What to include:** A waveform showing A, B, and Y for all four input combinations.
-
-**Suggested filename:** `04_or_gate.png`
-
-![OR gate simulation](report/waveforms/04_or_gate.png)
-
-*Figure 5: OR gate truth-table verification.*
+*Figure 5: OR gate verification.*
 
 ## 10.6 XOR Gate Simulation
+![XOR gate simulation](screenshots/xor_gate.png)
 
-**What to include:** A waveform showing A, B, and Y for all four input combinations.
-
-**Suggested filename:** `05_xor_gate.png`
-
-![XOR gate simulation](report/waveforms/05_xor_gate.png)
-
-*Figure 6: XOR gate truth-table verification.*
+*Figure 6: XOR gate verification.*
 
 ## 10.7 Half Adder Simulation
 
-**What to include:** A waveform showing A, B, SUM, and CARRY for all four input combinations.
-
-**Suggested filename:** `06_half_adder.png`
-
-![Half adder simulation](report/waveforms/06_half_adder.png)
+![Half adder simulation](screenshots/half_adder.png)
 
 *Figure 7: Half adder sum and carry verification.*
 
 ## 10.8 Full Adder Simulation
-
-**What to include:** A waveform showing A, B, Cin, SUM, and Cout for all eight input combinations.
-
-**Suggested filename:** `07_full_adder.png`
-
-![Full adder simulation](report/waveforms/07_full_adder.png)
+![Full adder simulation](screenshots/full_adder.png)
 
 *Figure 8: Full adder sum and carry verification.*
 
-## 10.9 ALU Addition Simulation
+## 10.9 ALU Simulation
+![ALU addition simulation](screenshots/alu_8bit.png)
 
-**What to include:** A waveform demonstrating 8-bit addition. Include the operands, operation selector, and ALU result.
+*Figure 9: ALU Simulation Verification.*
 
-**Suggested filename:** `08_alu_add.png`
+## 10.10 Program Counter Simulation
+![Program counter simulation](screenshots/program_counter.png)
 
-![ALU addition simulation](report/waveforms/08_alu_add.png)
+*Figure 10: Program counter simulation verification.*
 
-*Figure 9: Verification of 8-bit addition.*
+## 10.11 Program ROM Verification
+![Program ROM verification](screenshots/program_rom.png)
 
-## 10.10 ALU Subtraction Simulation
+*Figure 11: Program ROM verification.*
 
-**What to include:** A waveform demonstrating subtraction, especially `0x5A - 0x60 = 0xFA`.
+## 10.12 Control Unit Verification
+![Control Unit verification](screenshots/control_unit.png)
 
-**Suggested filename:** `09_alu_sub.png`
+*Figure 12: Control Unit verification.*
 
-![ALU subtraction simulation](report/waveforms/09_alu_sub.png)
+## 10.13 ACC Register Verification
+![ACC register verification](screenshots/acc_register.png)
 
-*Figure 10: Verification of 8-bit subtraction and modulo-256 behavior.*
+*Figure 13: ACC register reset, write, and hold behavior.*
 
-## 10.11 Program Counter Simulation
+## 10.14 R Register Verification
+![R register verification](screenshots/r_register.png)
 
-**What to include:** A waveform showing CLK, RESET, and PC. It should show PC resetting to zero and incrementing after successive rising clock edges.
+*Figure 14: R register reset, write, and hold behavior.*
 
-**Suggested filename:** `10_program_counter.png`
+## 10.15 Z Flag Verification
+![Z flag verification](screenshots/z_flag.png)
 
-![Program counter simulation](report/waveforms/10_program_counter.png)
+*Figure 15: Z flag verification.*
 
-*Figure 11: Program Counter reset and increment verification.*
+## 10.16 Top-Level RTL Schematic
+![Top-level CPU RTL schematic](screenshots/cpu_top.png)
 
-## 10.12 Program ROM Verification
+*Figure 16: RTL schematic of the integrated Set 8 CPU.*
 
-**What to include:** Evidence that the ROM outputs the eight required Set 8 instruction words at addresses 0–7. Also show that unused locations return `0x000`, if tested.
+## 10.17 Testbench Assertion Results
+![Testbench assertion results](screenshots/tb_cpu_top.png)
 
-**Suggested filename:** `11_program_rom.png`
+*Figure 17: Successful completion of the Set 8 CPU testbench.*
 
-![Program ROM verification](report/waveforms/11_program_rom.png)
 
-*Figure 12: Verification of Set 8 instruction memory.*
+![Testbench assertion results](screenshots/tb_cpu_top_2.png)
 
-## 10.13 Control Unit Verification
-
-**What to include:** Evidence of the decoded control signals for LDI, ADD, SUB, STA, and LDR. Include ACC_WE, R_WE, Z_WE, ALU_SEL, and ACC_SRC as applicable.
-
-**Suggested filename:** `12_control_unit.png`
-
-![Control Unit verification](report/waveforms/12_control_unit.png)
-
-*Figure 13: Verification of instruction decoding and control-signal generation.*
-
-## 10.14 ACC Register Verification
-
-**What to include:** Evidence that ACC resets to zero, accepts new values when enabled, and retains its previous value when its write enable is inactive.
-
-**Suggested filename:** `13_acc_register.png`
-
-![ACC register verification](report/waveforms/13_acc_register.png)
-
-*Figure 14: ACC register reset, write, and hold behavior.*
-
-## 10.15 R Register Verification
-
-**What to include:** Evidence that R resets to zero, stores the ACC value during STA, and retains its value during other instructions.
-
-**Suggested filename:** `14_r_register.png`
-
-![R register verification](report/waveforms/14_r_register.png)
-
-*Figure 15: R register reset, write, and hold behavior.*
-
-## 10.16 Z Flag Verification
-
-**What to include:** Evidence that Z becomes 1 when an updated ACC value is zero, becomes 0 when the updated ACC value is nonzero, and remains unchanged when its write enable is inactive.
-
-**Suggested filename:** `15_z_flag.png`
-
-![Z flag verification](report/waveforms/15_z_flag.png)
-
-*Figure 16: Verification of zero-flag behavior.*
-
-## 10.17 Top-Level RTL Schematic
-
-**What to include:** An RTL schematic of the integrated CPU, showing the PC, Program ROM, Control Unit, ALU, and register connections.
-
-**Suggested filename:** `16_top_level_schematic.png`
-
-![Top-level CPU RTL schematic](report/waveforms/16_top_level_schematic.png)
-
-*Figure 17: RTL schematic of the integrated Set 8 CPU.*
-
-## 10.18 Complete CPU Simulation Waveform
-
-**What to include:** The complete behavioral simulation with CLK, RESET, PC, Q, R_OUT, and Z visible. The waveform should show the reset state and the execution of all eight instructions.
-
-**Suggested filename:** `17_complete_cpu_waveform.png`
-
-![Complete CPU simulation waveform](report/waveforms/17_complete_cpu_waveform.png)
-
-*Figure 18: Complete Set 8 CPU simulation and program execution.*
-
-## 10.19 LDI Instruction Verification
-
-**What to include:** Evidence that the first instruction loads `0x64` into ACC, clears Z, and advances PC to 1.
-
-**Suggested filename:** `18_ldi_verification.png`
-
-![LDI instruction verification](report/waveforms/18_ldi_verification.png)
-
-*Figure 19: Verification of LDI immediate loading.*
-
-## 10.20 STA Instruction Verification
-
-**What to include:** Evidence that STA copies ACC into R while ACC and Z remain unchanged. Ideally show both STA instructions in the program.
-
-**Suggested filename:** `19_sta_verification.png`
-
-![STA instruction verification](report/waveforms/19_sta_verification.png)
-
-*Figure 20: Verification of STA register transfer.*
-
-## 10.21 SUB Instruction Verification
-
-**What to include:** Evidence that SUB correctly calculates `0x64 - 0x14 = 0x50`, `0x5A - 0x5A = 0x00`, and `0x5A - 0x60 = 0xFA`.
-
-**Suggested filename:** `20_sub_verification.png`
-
-![SUB instruction verification](report/waveforms/20_sub_verification.png)
-
-*Figure 21: Verification of SUB operations, zero result, and modulo-256 subtraction.*
-
-## 10.22 ADD Instruction Verification
-
-**What to include:** Evidence that the ADD instruction calculates `0x50 + 0x0A = 0x5A`.
-
-**Suggested filename:** `21_add_verification.png`
-
-![ADD instruction verification](report/waveforms/21_add_verification.png)
-
-*Figure 22: Verification of the ADD instruction.*
-
-## 10.23 LDR Instruction Verification
-
-**What to include:** Evidence that LDR loads `0x5A` from R into ACC, leaves R unchanged, and clears Z.
-
-**Suggested filename:** `22_ldr_verification.png`
-
-![LDR instruction verification](report/waveforms/22_ldr_verification.png)
-
-*Figure 23: Verification of LDR register transfer.*
-
-## 10.24 Testbench Assertion Results
-
-**What to include:** The simulation transcript or console output showing that all testbench assertions completed without errors and the message `ALL SET 8 CPU TESTS PASSED` was reported.
-
-**Suggested filename:** `23_testbench_pass.png`
-
-![Testbench assertion results](report/waveforms/23_testbench_pass.png)
-
-*Figure 24: Successful completion of the Set 8 CPU testbench.*
-
-**Screenshot note:** The supplied `tb_cpu_top.vhd` tests the integrated CPU. The standalone module screenshots above require individual module simulations or dedicated testbenches; do not use the complete CPU waveform as evidence that every standalone truth table was independently tested.
-
+*Figure 18: Successful completion of the Set 8 CPU testbench.*
 ---
 
 ## 11. Challenges Faced
-
-The following section should be completed after implementation and simulation.
-
-Possible areas to discuss, if they reflect your actual experience, include:
-
 - Correctly connecting structural VHDL components and their ports.
 - Handling logic-signal and vector widths.
 - Implementing two's-complement subtraction with an 8-bit result.
@@ -484,8 +323,6 @@ Possible areas to discuss, if they reflect your actual experience, include:
 - Verifying the PC, ROM contents, and output values at rising clock edges.
 - Debugging simulation errors and incorrect waveform results.
 
-**Actual challenges encountered:**  
-[Write your own implementation and debugging experiences here.]
 
 ## 12. Conclusion
 
@@ -493,14 +330,9 @@ This project implements a modular, single-cycle 8-bit CPU in VHDL for the assign
 
 The CPU is designed to execute LDI, ADD, SUB, STA, and LDR instructions with synchronous, active-high reset. The testbench checks the required program sequence and the resulting register states.
 
-**Final verification status:** [Complete this section after running the simulation and reviewing the assertion output and waveform screenshots.]
-
-**Expected final state after the eight Set 8 instructions:**
+**Final state after the eight Set 8 instructions:**
 
 - ACC / Q = `0xFA`
 - R_OUT = `0x5A`
 - Z = `0`
 - PC = `8`
-
-The final report should include the actual screenshots obtained from Xilinx ISE, the final source code, any observed simulation results, challenges encountered, and the completed conclusion.
-
