@@ -1,4 +1,4 @@
-#Mini 8-bit Accumulator CPU
+# Mini 8-bit Accumulator CPU
 **Course:** CSE 450 — VLSI Lab  
 **University:** University of Asia Pacific  
 **Project:** Final Project — Spring 2026  
